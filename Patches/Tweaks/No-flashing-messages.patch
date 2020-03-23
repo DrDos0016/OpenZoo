@@ -1,0 +1,18 @@
+Name: No Flashing Messages
+Author: Dr. Dos <doctordos@gmail.com>
+
+Force flashing colors in messages to be solid green. This looks lifeless but
+ensures messages captures in screenshots are easily readable.
+
+diff -Nrup src.orig/SRC/ELEMENTS.PAS src.new/SRC/ELEMENTS.PAS
+--- src.orig/SRC/ELEMENTS.PAS	2020-03-23 10:36:19.501208800 -0700
++++ src.new/SRC/ELEMENTS.PAS	2020-03-23 10:37:09.752852600 -0700
+@@ -64,7 +64,7 @@ procedure ElementMessageTimerTick(statId
+ 		with Board.Stats[statId] do begin
+ 			case X of
+ 				0: begin
+-					VideoWriteText((60 - Length(Board.Info.Message)) div 2, 24, 9 + (P2 mod 7), ' '+Board.Info.Message+' ');
++					VideoWriteText((60 - Length(Board.Info.Message)) div 2, 24, 10, ' '+Board.Info.Message+' ');
+ 					P2 := P2 - 1;
+ 					if P2 <= 0 then begin
+ 						RemoveStat(statId);
