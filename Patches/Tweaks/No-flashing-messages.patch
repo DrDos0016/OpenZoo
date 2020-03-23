@@ -2,7 +2,7 @@ Name: No Flashing Messages
 Author: Dr. Dos <doctordos@gmail.com>
 
 Force flashing colors in messages to be solid green. This looks lifeless but
-ensures messages captures in screenshots are easily readable.
+ensures messages captured in screenshots are easily readable.
 
 diff -Nrup src.orig/SRC/ELEMENTS.PAS src.new/SRC/ELEMENTS.PAS
 --- src.orig/SRC/ELEMENTS.PAS	2020-03-23 10:36:19.501208800 -0700
